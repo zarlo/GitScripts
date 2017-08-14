@@ -7,6 +7,12 @@ import platform
 def git(*args):
     return subprocess.check_call(['git'] + list(args))
 
+def gitupdate(repo, mPath):
+    if os.path.exists(mPath) == False:
+        git("clone", repo, mPath)
+    else:
+        git("pull", repo, mPath)
+
 def Restore(*args):
     return subprocess.check_call(['dotnet', 'restore'] + list(args))
 
@@ -16,20 +22,9 @@ IL2CPU = "https://github.com/CosmosOS/IL2CPU.git"
 XSharp = "https://github.com/CosmosOS/XSharp.git"
 Cosmos = "https://github.com/CosmosOS/Cosmos.git"
 
-if os.path.exists('Cosmos/') == False:
-    git("clone", Cosmos, "Cosmos/")
-else:
-    git("pull", Cosmos, "Cosmos/")
-
-if os.path.exists('IL2CPU/') == False:
-    git("clone", IL2CPU, "IL2CPU/")
-else:
-    git("pull", IL2CPU, "IL2CPU/")
-
-if os.path.exists('XSharp/') == False:
-    git("clone", XSharp, "XSharp/")
-else:
-    git("pull", XSharp, "XSharp/")
+gitupdate( Cosmos, "Cosmos/")
+gitupdate( IL2CPU, "IL2CPU/")
+gitupdate( XSharp, "XSharp/")
 
 
 if platform.system() == Windows:

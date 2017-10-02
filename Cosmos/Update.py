@@ -13,7 +13,7 @@ def DownloadUpdater():
     NewFile.close()
 
 def RunUpdater():
-    return os.system("Updater.py https://raw.githubusercontent.com/zarlo/GitScripts/master/Cosmos/Update.py " + __file__])
+    return os.system("Updater.py https://raw.githubusercontent.com/zarlo/GitScripts/master/Cosmos/Update.py " + __file__)
 
 
 def git(*args):

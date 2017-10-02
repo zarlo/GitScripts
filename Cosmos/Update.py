@@ -3,6 +3,8 @@
 import subprocess
 import os.path
 import platform
+import hashlib
+import urllib2
 
 def git(*args):
     return subprocess.check_call(['git'] + list(args))
@@ -13,10 +15,44 @@ def gitupdate(repo, mPath):
     else:
         git("pull", repo, mPath)
 
-def Restore(*args):
-    return subprocess.check_call(['dotnet', 'restore'] + list(args))
+def sha256_checksum(filename, block_size=65536):
+    sha256 = hashlib.sha256()
+    with open(filename, 'rb') as f:
+        for block in iter(lambda: f.read(block_size), b''):
+            sha256.update(block)
+    return sha256.hexdigest()
+
+def sha256_checksum_Remote(url, block_size=65536):
+    sha256 = hashlib.sha256()
+    remote = urllib2.urlopen(url)
+
+    while True:
+
+        data = remote.read(4096)
+
+        if not data:
+            break
+
+        sha256.update(data)
+
+    return sha256.hexdigest()
+
 
 print(platform.system())
+
+print("Looking for script update")
+
+ScriptvL = sha256_checksum(os.path.basename(__file__));
+ScriptvR = sha256_checksum_Remote("https://raw.githubusercontent.com/zarlo/GitScripts/master/Cosmos/Update.py");
+
+
+print("Loacl: " + ScriptvL)
+print("Remote: " + ScriptvR)
+
+if ScriptvR != ScriptvL:
+   print("just letting to know this script is out of date or has been edited")
+   os.system("pause")
+
 
 IL2CPU = "https://github.com/CosmosOS/IL2CPU.git"
 XSharp = "https://github.com/CosmosOS/XSharp.git"
@@ -27,7 +63,7 @@ gitupdate( IL2CPU, "IL2CPU/")
 gitupdate( XSharp, "XSharp/")
 
 
-if platform.system() == Windows:
-    subprocess.check_call(['CMD.exe', 'Cosmos/install-VS2017.bat'])
-else:
-    Restore("Cosmos/Builder.sln")
+subprocess.check_call(['CMD.exe', 'Cosmos/install-VS2017.bat  -NOVSLAUNCH'])
+
+print("Done :)")
+os.system("pause")

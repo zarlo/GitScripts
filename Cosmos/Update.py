@@ -6,6 +6,13 @@ import platform
 import hashlib
 import urllib2
 
+def DownloadUpdater():
+    Updater = urllib2.urlopen(sys.argv[1])
+    NewFile = open("Updater.py", 'w')
+    NewFile.write(Updater.read())
+    NewFile.close()
+
+
 def git(*args):
     return subprocess.check_call(['git'] + list(args))
 

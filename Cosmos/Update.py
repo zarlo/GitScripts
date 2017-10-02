@@ -7,10 +7,13 @@ import hashlib
 import urllib2
 
 def DownloadUpdater():
-    Updater = urllib2.urlopen(sys.argv[1])
+    Updater = urllib2.urlopen("https://raw.githubusercontent.com/zarlo/GitScripts/master/UpdaterScript.py")
     NewFile = open("Updater.py", 'w')
     NewFile.write(Updater.read())
     NewFile.close()
+
+def RunUpdater():
+    return subprocess.check_call(['Updater.py', 'https://raw.githubusercontent.com/zarlo/GitScripts/master/Cosmos/Update.py', __file__])
 
 
 def git(*args):
@@ -57,8 +60,8 @@ print("Loacl: " + ScriptvL)
 print("Remote: " + ScriptvR)
 
 if ScriptvR != ScriptvL:
-   print("just letting to know this script is out of date or has been edited")
-   os.system("pause")
+   DownloadUpdater()
+   RunUpdater()
 
 
 IL2CPU = "https://github.com/CosmosOS/IL2CPU.git"

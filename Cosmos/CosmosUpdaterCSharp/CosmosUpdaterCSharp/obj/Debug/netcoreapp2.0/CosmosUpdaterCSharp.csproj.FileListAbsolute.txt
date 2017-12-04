@@ -1,0 +1,11 @@
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\obj\Debug\netcoreapp2.0\CosmosUpdaterCSharp.csprojResolveAssemblyReference.cache
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\obj\Debug\netcoreapp2.0\CosmosUpdaterCSharp.csproj.CoreCompileInputs.cache
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\obj\Debug\netcoreapp2.0\CosmosUpdaterCSharp.AssemblyInfoInputs.cache
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\obj\Debug\netcoreapp2.0\CosmosUpdaterCSharp.AssemblyInfo.cs
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\bin\Debug\netcoreapp2.0\CosmosUpdaterCSharp.deps.json
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\bin\Debug\netcoreapp2.0\CosmosUpdaterCSharp.runtimeconfig.json
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\bin\Debug\netcoreapp2.0\CosmosUpdaterCSharp.runtimeconfig.dev.json
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\bin\Debug\netcoreapp2.0\CosmosUpdaterCSharp.dll
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\bin\Debug\netcoreapp2.0\CosmosUpdaterCSharp.pdb
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\obj\Debug\netcoreapp2.0\CosmosUpdaterCSharp.dll
+C:\Users\zarlo\Desktop\DEV\GitScripts\Cosmos\CosmosUpdaterCSharp\CosmosUpdaterCSharp\obj\Debug\netcoreapp2.0\CosmosUpdaterCSharp.pdb

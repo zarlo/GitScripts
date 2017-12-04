@@ -3,8 +3,6 @@
 import subprocess
 import os.path
 import platform
-import hashlib
-import urllib2
 
 def git(*args):
     return subprocess.check_call(['git'] + list(args))
@@ -17,6 +15,7 @@ def gitupdate(repo, mPath):
 
 print(platform.system())
 
+
 IL2CPU = "https://github.com/CosmosOS/IL2CPU.git"
 XSharp = "https://github.com/CosmosOS/XSharp.git"
 Cosmos = "https://github.com/CosmosOS/Cosmos.git"
@@ -24,7 +23,6 @@ Cosmos = "https://github.com/CosmosOS/Cosmos.git"
 gitupdate( Cosmos, "Cosmos/")
 gitupdate( IL2CPU, "IL2CPU/")
 gitupdate( XSharp, "XSharp/")
-
 
 subprocess.check_call(['CMD.exe', 'Cosmos/install-VS2017.bat  -NOVSLAUNCH'])
 

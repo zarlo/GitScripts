@@ -15,7 +15,6 @@ def gitupdate(repo, mPath):
 
 print(platform.system())
 
-
 IL2CPU = "https://github.com/CosmosOS/IL2CPU.git"
 XSharp = "https://github.com/CosmosOS/XSharp.git"
 Cosmos = "https://github.com/CosmosOS/Cosmos.git"
@@ -24,7 +23,10 @@ gitupdate( Cosmos, "Cosmos/")
 gitupdate( IL2CPU, "IL2CPU/")
 gitupdate( XSharp, "XSharp/")
 
-subprocess.check_call(['CMD.exe', 'Cosmos/install-VS2017.bat  -NOVSLAUNCH'])
+
+root = os.getcwd()
+
+subprocess.run(root + '\Cosmos\install-VS2017.bat -NOVSLAUNCH', cwd=root + '\Cosmos' )
 
 print("Done :)")
 os.system("pause")

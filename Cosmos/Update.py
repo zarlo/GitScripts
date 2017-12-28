@@ -19,9 +19,9 @@ IL2CPU = "https://github.com/CosmosOS/IL2CPU.git"
 XSharp = "https://github.com/CosmosOS/XSharp.git"
 Cosmos = "https://github.com/CosmosOS/Cosmos.git"
 
-gitupdate( Cosmos, "Cosmos/")
-gitupdate( IL2CPU, "IL2CPU/")
-gitupdate( XSharp, "XSharp/")
+gitupdate( Cosmos, "/Cosmos/")
+gitupdate( IL2CPU, "/IL2CPU/")
+gitupdate( XSharp, "/XSharp/")
 
 
 root = os.getcwd()
